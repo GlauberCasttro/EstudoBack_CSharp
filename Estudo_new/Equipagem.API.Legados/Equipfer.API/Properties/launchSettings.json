@@ -1,0 +1,35 @@
+﻿{
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:50050",
+      "sslPort": 44314
+    }
+  },
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": false,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ORACLE_CONNECTION": "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=ora-pvlie-01.vlinet.local)(PORT=1521))(ADDRESS=(PROTOCOL=TCP)(HOST=ora-pvlie-02.vlinet.local)(PORT=1521))(LOAD_BALANCE=yes)(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=pvlie)))",
+        "ORACLE_USER": "PJGEFEQP",
+        "ORACLE_PASSWORD": "pvli3#123",
+        "CCO_URI": "http://localhost:1909"
+      }
+    },
+    "EquipferAPI": {
+      "commandName": "Project",
+      "launchBrowser": false,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Production",
+        "ORACLE_CONNECTION": "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=ora-pvlie-01.vlinet.local)(PORT=1521))(ADDRESS=(PROTOCOL=TCP)(HOST=ora-pvlie-02.vlinet.local)(PORT=1521))(LOAD_BALANCE=yes)(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=pvlie)))",
+        "ORACLE_USER": "pjeqpfr",
+        "ORACLE_PASSWORD": "IT8C7TRC",
+        "CCO_URI": "http://172.21.25.171"
+      }
+    }
+  }
+}

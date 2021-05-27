@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="SonarQube - Equipagem Equipfer API Sonar way" ToolsVersion="15.0">
+  <Include Path="..\.sonarlint\equipagem-equipfer-apicsharp.ruleset" Action="Default" />
+</RuleSet>
