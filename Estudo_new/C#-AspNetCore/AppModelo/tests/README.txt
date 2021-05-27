@@ -1,0 +1,1 @@
+Pasta onde ira guardar informações de testes.

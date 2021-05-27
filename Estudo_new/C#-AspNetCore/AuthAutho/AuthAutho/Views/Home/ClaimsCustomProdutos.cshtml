@@ -1,0 +1,36 @@
+﻿@using AuthAutho.Extensions
+@{
+    ViewData["Title"] = "ClaimsCustomProdutos";
+}
+
+<h1>Vendo os produtos</h1>
+
+
+@{
+//utilizaondo o ifClain da classeRazorExtensios
+    if (this.IfClaim("Produtos", "Ler"))
+    {
+        <div class="alert alert-primary" role="alert">
+            Você tem permissão
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-danger" role="alert">
+            <p>Você não tem permissão para ver os dados dessa transação!!!<br />
+           Contate o seu gestor e solicite acesso.</p>
+        </div>
+    }
+}
+
+
+<!--Esconde o html de acordo com suas claims-->
+<div>
+    @Html.ActionLink("Secrety", "ClaimsCustom").IfClaimShow(Context, "Produtos", "Ler")
+</div>
+
+
+<!--Desabilitando um elemento html de acordo com as permissoes -->
+<div>
+    <a href="#" class="btn btn-danger @Html.Raw(this.IfClaimShow("Produtos","Ler "))" title="Você não tem permissão para excluir!!!">Excluir</a>
+</div>
